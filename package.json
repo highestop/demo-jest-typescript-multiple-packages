@@ -11,7 +11,7 @@
     "test:dev": "jest --watchAll",
     "test:list": "jest --listTests",
     "test:config": "jest --showConfig",
-    "build": "tsc"
+    "build": "tsc -p tsconfig.prod.json"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.16.2",
