@@ -11,6 +11,6 @@
     "baseUrl": "./",
     "paths": {}
   },
-  "exclude": ["node_modules", "dist", "out"],
-  "include": ["**/src", "**/test", "**/typing"]
+  "include": ["**/src", "**/test", "**/typing"],
+  "exclude": ["node_modules", "dist", "out"]
 }

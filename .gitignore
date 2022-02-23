@@ -3,6 +3,7 @@
 # compiled output
 dist
 # out
+*.js
 
 # dependencies
 node_modules

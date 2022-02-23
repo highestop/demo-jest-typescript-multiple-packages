@@ -3,6 +3,6 @@
   "compilerOptions": {
     "types": ["node"]
   },
-  "include": ["src", "typing"],
+  "include": ["**/src", "**/typing"],
   "exclude": ["test/*", "**/*.spec.ts"]
 }
