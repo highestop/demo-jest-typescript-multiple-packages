@@ -1,0 +1,26 @@
+{
+  "name": "demo-jest",
+  "version": "0.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/highestop/demo-jest.git"
+  },
+  "scripts": {
+    "test": "jest --verbose",
+    "test:ci": "jest --ci --silent --config jest-coverage.config.ts",
+    "test:watch": "jest --watchAll",
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "@types/jest": "^27.4.0",
+    "jest": "^27.5.1",
+    "jest-junit": "^13.0.0",
+    "ts-jest": "^27.1.3",
+    "ts-node": "^10.5.0",
+    "typescript": "^4.5.5"
+  },
+  "jest-junit": {
+    "outputDirectory": "out/Test",
+    "outputName": "junit.xml"
+  }
+}

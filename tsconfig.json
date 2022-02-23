@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "jsx": "react",
+    "types": ["node", "jest"],
+    "strict": true,
+    "skipLibCheck": false,
+    "moduleResolution": "node",
+    "esModuleInterop": true
+  },
+  "exclude": ["node_modules", "dist", "out"],
+  "include": ["src", "test", "typing"]
+}
