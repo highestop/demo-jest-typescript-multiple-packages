@@ -1,22 +1,8 @@
-import type { Config } from '@jest/types';
+import { Config } from '@jest/types';
+import { createJestConfig } from './jest.config.build';
+import packageJson from './package.json';
 
 export default {
-  setupFilesAfterEnv: ['./test/setup-jest.ts'],
-  globals: {
-    'ts-jest': {
-      tsconfig: './tsconfig.json',
-    },
-  },
-  transform: {
-    '^.+\\.(ts)$': 'ts-jest',
-  },
-  transformIgnorePatterns: ['node_modules/', 'dist/'],
-  collectCoverage: true,
-  collectCoverageFrom: [
-    'src/**/*.ts',
-    '!**/__test__/*',
-    '!src/**/*.spec.ts',
-    '!src/**/*.test-helper.ts',
-  ],
-  coverageReporters: ['text', 'text-summary'],
+  ...createJestConfig(),
+  displayName: packageJson.name,
 } as Config.InitialOptions;

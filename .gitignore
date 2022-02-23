@@ -2,7 +2,7 @@
 
 # compiled output
 dist
-out
+# out
 
 # dependencies
 node_modules

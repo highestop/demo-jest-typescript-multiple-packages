@@ -3,6 +3,5 @@
 ```
 yarn
 yarn test
-yarn test:ci
-yarn test:watch
+yarn test:dev
 ```
