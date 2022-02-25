@@ -4,5 +4,15 @@
     "types": ["node"]
   },
   "include": ["**/src", "**/typing"],
-  "exclude": ["test/*", "**/*.spec.ts"]
+  "exclude": [
+    "node_modules",
+    "dist",
+    "out",
+    "**/test/*",
+    "**/__tests__/*",
+    "**/*.test.ts",
+    "**/*.test.tsx",
+    "**/*.spec.ts",
+    "**/*.spec.tsx"
+  ]
 }

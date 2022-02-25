@@ -20,17 +20,14 @@ function coverageConfig(project?: string): Config.InitialOptions {
   return {
     // jest-junit 生成报告配置见 package.json 中的 jest-junit 项
     testResultsProcessor: 'jest-junit',
-    // 测试覆盖率只统计 src 目录下的 ts|tsx 文件
+    // 测试覆盖率只统计 src 目录下的 ts|tsx 文件。__tests__ 下及 test|spec 的测试文件不纳入
     collectCoverageFrom: [
       '<rootDir>/src/**/*.{ts,tsx}',
       '<rootDir>/packages/**/src/**/*.{ts,tsx}',
-    ],
-    // 测试覆盖率不纳入的文件。特殊地，index.ts|tsx 也不纳入
-    coveragePathIgnorePatterns: [
-      '**/*.d.ts',
-      '**/*.spec.ts',
-      'index.ts',
-      'index.tsx',
+      '!**/__tests__/**',
+      '!**/*.{test|spec}.{ts|tsx}',
+      // 特殊地，index.ts|tsx 也不纳入
+      '!**/index.{ts|tsx}',
     ],
     // https://gist.github.com/rishitells/3c4536131819cff4eba2c8ab5bbb4570
     coverageReporters: ['cobertura', 'text', 'text-summary'],
@@ -75,11 +72,11 @@ function testTarget(
   | 'modulePathIgnorePatterns'
 > {
   return {
-    // 测试文件规范：必须放在 test 目录下，以 .spec.ts|tsx 结尾
-    // TestHelpers 也请放在 test 目录中，命名如 **-test-helper.ts。Helper 本身的测试文件如 **-test-helper.spec.ts
+    // 测试文件规范：__tests__ 目录下名称为 *.test|spec 的 ts|tsx 文件
     testMatch: [
-      '<rootDir>/test/**/*.spec.(ts|tsx)',
-      `<rootDir>/packages/${project ?? '**'}/test/**/*.spec.(ts|tsx)`,
+      `<rootDir>/packages/${
+        project ? `${project}/` : ''
+      }**/__tests__/**/*.(spec|test).(ts|tsx)`,
     ],
     // 忽略的测试示例文件
     testPathIgnorePatterns: ['<rootDir>/test/demo'],

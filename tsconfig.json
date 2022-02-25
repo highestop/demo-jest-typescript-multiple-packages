@@ -9,7 +9,10 @@
     "resolveJsonModule": true,
     "esModuleInterop": true,
     "baseUrl": "./",
-    "paths": {}
+    "paths": {
+      "~test": ["test/helpers/index"],
+      "@package/app/test": ["packages/app/test/helpers/index"]
+    }
   },
   "include": ["**/src", "**/test", "**/typing"],
   "exclude": ["node_modules", "dist", "out"]
