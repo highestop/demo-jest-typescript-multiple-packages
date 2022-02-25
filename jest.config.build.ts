@@ -72,11 +72,12 @@ function testTarget(
   | 'modulePathIgnorePatterns'
 > {
   return {
-    // 测试文件规范：__tests__ 目录下名称为 *.test|spec 的 ts|tsx 文件
+    // 测试文件规范：根目录或 pacakges/ 下的 src 中的 __tests__ 目录下名称为 *.test|spec 的 ts|tsx 文件
     testMatch: [
+      '<rootDir>/src/**/__tests__/**/*.(spec|test).(ts|tsx)',
       `<rootDir>/packages/${
-        project ? `${project}/` : ''
-      }**/__tests__/**/*.(spec|test).(ts|tsx)`,
+        project ?? '**'
+      }/src/**/__tests__/**/*.(spec|test).(ts|tsx)`,
     ],
     // 忽略的测试示例文件
     testPathIgnorePatterns: ['<rootDir>/test/demo'],
