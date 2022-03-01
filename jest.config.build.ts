@@ -23,12 +23,12 @@ function coverageConfig(project?: string): Config.InitialOptions {
     // 测试覆盖率只统计 src 目录下的 ts|tsx 文件。各处 __tests__ 目录下的文件及各处的 test|spec 测试文件均不纳入
     collectCoverageFrom: [
       // 特殊地，test 目录下的测试工具会被纳入
-      '<rootDir>/{src|test}/**/*.{ts|tsx}',
-      '<rootDir>/packages/*/{src|test}/**/*.{ts|tsx}',
+      '<rootDir>/(src|test)/**/*.(ts|tsx)',
+      '<rootDir>/packages/*/(src|test)/**/*.(ts|tsx)',
       '!**/__tests__/**',
-      '!**/*.{test|spec}.{ts|tsx}',
+      '!**/*.(test|spec).(ts|tsx)',
       // 特殊地，index.ts|tsx 也不纳入
-      '!**/index.{ts|tsx}',
+      '!**/index.(ts|tsx)',
     ],
     // https://gist.github.com/rishitells/3c4536131819cff4eba2c8ab5bbb4570
     coverageReporters: ['cobertura', 'text', 'text-summary'],
