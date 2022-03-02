@@ -20,15 +20,11 @@ function coverageConfig(project?: string): Config.InitialOptions {
   return {
     // jest-junit 生成报告配置见 package.json 中的 jest-junit 项
     testResultsProcessor: 'jest-junit',
-    // 测试覆盖率只统计 src 目录下的 ts|tsx 文件。各处 __tests__ 目录下的文件及各处的 test|spec 测试文件均不纳入
     collectCoverageFrom: [
-      // 特殊地，test 目录下的测试工具会被纳入
       '<rootDir>/(src|test)/**/*.(ts|tsx)',
       '<rootDir>/packages/*/(src|test)/**/*.(ts|tsx)',
       '!**/__tests__/**',
       '!**/*.(test|spec).(ts|tsx)',
-      // 特殊地，index.ts|tsx 也不纳入
-      '!**/index.(ts|tsx)',
     ],
     // https://gist.github.com/rishitells/3c4536131819cff4eba2c8ab5bbb4570
     coverageReporters: ['cobertura', 'text', 'text-summary'],
@@ -73,11 +69,14 @@ function testTarget(
   | 'modulePathIgnorePatterns'
 > {
   return {
-    // src 目录下任意位置的 __test__ 文件夹中及各个项目根目录下的 test 文件夹中的命名为 spec|test 的 ts|tsx 文件
     testMatch: [
       '<rootDir>/src/**/__tests__/**/*.(spec|test).(ts|tsx)',
-      `<rootDir>/packages/${project ? `${project}/` : ''}*/src/**/__tests__/**/*.(spec|test).(ts|tsx)`,
-      `<rootDir>/packages/${project ? `${project}/` : ''}*/test/**/*.(spec|test).(ts|tsx)`
+      '<rootDir>/test/**/*.(spec|test).(ts|tsx)',
+      `<rootDir>/packages/${
+        project ?? '*'
+      }/src/**/__tests__/**/*.(spec|test).(ts|tsx)`,
+      `<rootDir>/packages/${project ?? '*'}/test/**/*.(spec|test).(ts|tsx)`,
+      '<rootDir>/jest.config.build.spec.ts',
     ],
     // 忽略的测试示例文件
     testPathIgnorePatterns: ['<rootDir>/test/demo'],
@@ -116,7 +115,7 @@ function snapshotConfig(
   return { snapshotSerializers: ['enzyme-to-json/serializer'] };
 }
 
-const packagePrefix = '@packages/';
+const packagePrefix = '@package/';
 
 export function createJestConfig(project?: string): Config.InitialOptions {
   if (project) {

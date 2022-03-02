@@ -7,10 +7,11 @@
   },
   "scripts": {
     "test": "jest --silent",
-    "test:dev": "jest --watchAll",
+    "test:dev": "jest --watchAll --verbose=false",
     "test:list": "jest --listTests",
     "test:config": "jest --showConfig",
     "test:coverage": "jest --silent --coverage",
+    "test:builder": "jest --watch jest.config.build.spec.ts",
     "test:ci": "jest --ci --silent --coverage",
     "build": "tsc -p tsconfig.prod.json"
   },
@@ -31,6 +32,7 @@
     "jest-enzyme": "^7.1.2",
     "jest-image-snapshot": "^4.5.1",
     "jest-junit": "^13.0.0",
+    "micromatch": "^4.0.4",
     "redux-devtools-extension": "^2.13.9",
     "redux-mock-store": "^1.5.4",
     "reflect-metadata": "^0.1.13",
