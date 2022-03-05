@@ -14,10 +14,10 @@ function expectMatchersToMatchPath(
   return include && exclude;
 }
 
-const jestBuilderSpec = '<rootDir>/jest.config.build.spec.ts';
-const jestBuilder = '<rootDir>/jest.config.build.ts';
+const jestBuilderSpec = '<rootDir>/testing/jest.config.builder.spec.ts';
+const jestBuilder = '<rootDir>/testing/jest.config.builder.ts';
 
-const otherConfig = '<rootDir>/jest.setup.ts';
+const otherConfig = '<rootDir>/testing/jest.setup.ts';
 const otherPackageConfig = '<rootDir>/packages/app/service.plugin.ts';
 
 const srcScopedSpecTs =
@@ -40,12 +40,12 @@ const srcUnscopedTestTsx =
 const srcUnscopedTs = '<rootDir>/packages/app/src/component/index.ts';
 const srcUnscopedTsx = '<rootDir>/packages/app/src/component/index.tsx';
 
-const helperSpecTs = '<rootDir>/packages/app/test/index.spec.ts';
-const helperSpecTsx = '<rootDir>/packages/app/test/index.spec.tsx';
-const helperTestTs = '<rootDir>/packages/app/test/index.spec.ts';
-const helperTestTsx = '<rootDir>/packages/app/test/index.spec.tsx';
-const helperTs = '<rootDir>/packages/app/test/index.ts';
-const helperTsx = '<rootDir>/packages/app/test/index.tsx';
+const helperSpecTs = '<rootDir>/packages/app/testing/index.spec.ts';
+const helperSpecTsx = '<rootDir>/packages/app/testing/index.spec.tsx';
+const helperTestTs = '<rootDir>/packages/app/testing/index.spec.ts';
+const helperTestTsx = '<rootDir>/packages/app/testing/index.spec.tsx';
+const helperTs = '<rootDir>/packages/app/testing/index.ts';
+const helperTsx = '<rootDir>/packages/app/testing/index.tsx';
 
 describe('Jest Config Builder', () => {
   test('指定 Project, 不应该生成 Coverage Path', () => {
