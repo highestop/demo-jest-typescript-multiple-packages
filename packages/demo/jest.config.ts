@@ -1,5 +1,5 @@
 import { Config } from '@jest/types'
-import { createJestConfig } from '../../jest.config.build'
+import { createJestConfig } from '../../testing/jest.config.builder'
 import packageJson from './package.json'
 
 export default {

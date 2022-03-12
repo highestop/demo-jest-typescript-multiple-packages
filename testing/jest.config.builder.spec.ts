@@ -1,5 +1,5 @@
 import { isMatch } from 'micromatch';
-import { createJestConfig } from './jest.config.build';
+import { createJestConfig } from './jest.config.builder';
 
 function expectMatchersToMatchPath(
   matchers: string[],
