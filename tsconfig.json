@@ -10,10 +10,12 @@
     "esModuleInterop": true,
     "baseUrl": "./",
     "paths": {
+      "~src": ["src/index"],
       "~test": ["test/helpers/index"],
+      "@package/app": ["packages/app/src/index"],
       "@package/app/test": ["packages/app/test/helpers/index"]
     }
   },
-  "include": ["**/src", "**/test", "**/typing"],
+  "include": ["**/src", "**/test", "**/typed"],
   "exclude": ["node_modules", "dist", "out"]
 }

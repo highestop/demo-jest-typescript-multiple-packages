@@ -1,3 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="0" failures="0" errors="0" time="0.001">
+<testsuites name="jest tests" tests="25" failures="0" errors="0" time="2.218">
+  <testsuite name="[index]" errors="0" failures="0" skipped="0" timestamp="2022-03-12T03:06:27" time="1.14" tests="1">
+    <testcase classname="[index] given/arrange when/act then/assert" name="[index] given/arrange when/act then/assert" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="[index]" errors="0" failures="0" skipped="0" timestamp="2022-03-12T03:06:27" time="1.151" tests="1">
+    <testcase classname="[index] given/arrange when/act then/assert" name="[index] given/arrange when/act then/assert" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="Jest Config Builder" errors="0" failures="0" skipped="0" timestamp="2022-03-12T03:06:27" time="1.31" tests="23">
+    <testcase classname="Jest Config Builder 指定 Project, 不应该生成 Coverage Path" name="Jest Config Builder 指定 Project, 不应该生成 Coverage Path" time="0.004">
+    </testcase>
+    <testcase classname="Jest Config Builder 不指定 Project, Coverage Path 应该能正确匹配到路径 packages/*/src 下非 __tests__ 下的 *.(ts|tsx) 应该能匹配到" name="Jest Config Builder 不指定 Project, Coverage Path 应该能正确匹配到路径 packages/*/src 下非 __tests__ 下的 *.(ts|tsx) 应该能匹配到" time="0.006">
+    </testcase>
+    <testcase classname="Jest Config Builder 不指定 Project, Coverage Path 应该能正确匹配到路径 packages/*/src 下非 __tests__ 下的 *.(spec|test).(ts|tsx) 不应该能匹配到" name="Jest Config Builder 不指定 Project, Coverage Path 应该能正确匹配到路径 packages/*/src 下非 __tests__ 下的 *.(spec|test).(ts|tsx) 不应该能匹配到" time="0.008">
+    </testcase>
+    <testcase classname="Jest Config Builder 不指定 Project, Coverage Path 应该能正确匹配到路径 packages/*/src 下的 __tests__ 下的所有文件不应该能匹配到" name="Jest Config Builder 不指定 Project, Coverage Path 应该能正确匹配到路径 packages/*/src 下的 __tests__ 下的所有文件不应该能匹配到" time="0.002">
+    </testcase>
+    <testcase classname="Jest Config Builder 不指定 Project, Coverage Path 应该能正确匹配到路径 packages/*/test 下的 *.(ts|tsx) 应该能匹配到" name="Jest Config Builder 不指定 Project, Coverage Path 应该能正确匹配到路径 packages/*/test 下的 *.(ts|tsx) 应该能匹配到" time="0.001">
+    </testcase>
+    <testcase classname="Jest Config Builder 不指定 Project, Coverage Path 应该能正确匹配到路径 packages/*/test 下的 *.(spec|test).(ts|tsx) 不应该能匹配到" name="Jest Config Builder 不指定 Project, Coverage Path 应该能正确匹配到路径 packages/*/test 下的 *.(spec|test).(ts|tsx) 不应该能匹配到" time="0.001">
+    </testcase>
+    <testcase classname="Jest Config Builder 不指定 Project, Coverage Path 应该能正确匹配到路径 packages/*/ 根目录下的 *.ts 不应该能匹配到" name="Jest Config Builder 不指定 Project, Coverage Path 应该能正确匹配到路径 packages/*/ 根目录下的 *.ts 不应该能匹配到" time="0.001">
+    </testcase>
+    <testcase classname="Jest Config Builder 指定 Project, Test Matcher 应该能正确匹配到路径 packages/*/src 下的 __tests__/*.(spec|test).(ts|tsx) 文件应该能匹配到" name="Jest Config Builder 指定 Project, Test Matcher 应该能正确匹配到路径 packages/*/src 下的 __tests__/*.(spec|test).(ts|tsx) 文件应该能匹配到" time="0.002">
+    </testcase>
+    <testcase classname="Jest Config Builder 指定 Project, Test Matcher 应该能正确匹配到路径 packages/*/src 下的 __tests__/*.(ts|tsx) 文件不应该能匹配到" name="Jest Config Builder 指定 Project, Test Matcher 应该能正确匹配到路径 packages/*/src 下的 __tests__/*.(ts|tsx) 文件不应该能匹配到" time="0.001">
+    </testcase>
+    <testcase classname="Jest Config Builder 指定 Project, Test Matcher 应该能正确匹配到路径 packages/*/src 下非 __tests__ 下的文件不应该能匹配到" name="Jest Config Builder 指定 Project, Test Matcher 应该能正确匹配到路径 packages/*/src 下非 __tests__ 下的文件不应该能匹配到" time="0.002">
+    </testcase>
+    <testcase classname="Jest Config Builder 指定 Project, Test Matcher 应该能正确匹配到路径 packages/*/test 下的 *.(spec|test).(ts|tsx) 文件应该能匹配到" name="Jest Config Builder 指定 Project, Test Matcher 应该能正确匹配到路径 packages/*/test 下的 *.(spec|test).(ts|tsx) 文件应该能匹配到" time="0.002">
+    </testcase>
+    <testcase classname="Jest Config Builder 指定 Project, Test Matcher 应该能正确匹配到路径 packages/*/test 下的 *.(ts|tsx) 文件不应该能匹配到" name="Jest Config Builder 指定 Project, Test Matcher 应该能正确匹配到路径 packages/*/test 下的 *.(ts|tsx) 文件不应该能匹配到" time="0.001">
+    </testcase>
+    <testcase classname="Jest Config Builder 指定 Project, Test Matcher 应该能正确匹配到路径 build.spec.ts 自己应该能匹配到" name="Jest Config Builder 指定 Project, Test Matcher 应该能正确匹配到路径 build.spec.ts 自己应该能匹配到" time="0">
+    </testcase>
+    <testcase classname="Jest Config Builder 指定 Project, Test Matcher 应该能正确匹配到路径 build.ts 不应该能匹配到" name="Jest Config Builder 指定 Project, Test Matcher 应该能正确匹配到路径 build.ts 不应该能匹配到" time="0">
+    </testcase>
+    <testcase classname="Jest Config Builder 指定 Project, Test Matcher 应该能正确匹配到路径 其它配置文件不应该能匹配到" name="Jest Config Builder 指定 Project, Test Matcher 应该能正确匹配到路径 其它配置文件不应该能匹配到" time="0.001">
+    </testcase>
+    <testcase classname="Jest Config Builder 不指定 Project, Test Matcher 应该能正确匹配到路径 packages/*/src 下的 __tests__/*.(spec|test).(ts|tsx) 文件应该能匹配到" name="Jest Config Builder 不指定 Project, Test Matcher 应该能正确匹配到路径 packages/*/src 下的 __tests__/*.(spec|test).(ts|tsx) 文件应该能匹配到" time="0.001">
+    </testcase>
+    <testcase classname="Jest Config Builder 不指定 Project, Test Matcher 应该能正确匹配到路径 packages/*/src 下的 __tests__/*.(ts|tsx) 文件不应该能匹配到" name="Jest Config Builder 不指定 Project, Test Matcher 应该能正确匹配到路径 packages/*/src 下的 __tests__/*.(ts|tsx) 文件不应该能匹配到" time="0.001">
+    </testcase>
+    <testcase classname="Jest Config Builder 不指定 Project, Test Matcher 应该能正确匹配到路径 packages/*/src 下非 __tests__ 下的文件不应该能匹配到" name="Jest Config Builder 不指定 Project, Test Matcher 应该能正确匹配到路径 packages/*/src 下非 __tests__ 下的文件不应该能匹配到" time="0.001">
+    </testcase>
+    <testcase classname="Jest Config Builder 不指定 Project, Test Matcher 应该能正确匹配到路径 packages/*/test 下的 *.(spec|test).(ts|tsx) 文件应该能匹配到" name="Jest Config Builder 不指定 Project, Test Matcher 应该能正确匹配到路径 packages/*/test 下的 *.(spec|test).(ts|tsx) 文件应该能匹配到" time="0.005">
+    </testcase>
+    <testcase classname="Jest Config Builder 不指定 Project, Test Matcher 应该能正确匹配到路径 packages/*/test 下的 *.(ts|tsx) 文件不应该能匹配到" name="Jest Config Builder 不指定 Project, Test Matcher 应该能正确匹配到路径 packages/*/test 下的 *.(ts|tsx) 文件不应该能匹配到" time="0">
+    </testcase>
+    <testcase classname="Jest Config Builder 不指定 Project, Test Matcher 应该能正确匹配到路径 build.spec.ts 自己应该能匹配到" name="Jest Config Builder 不指定 Project, Test Matcher 应该能正确匹配到路径 build.spec.ts 自己应该能匹配到" time="0">
+    </testcase>
+    <testcase classname="Jest Config Builder 不指定 Project, Test Matcher 应该能正确匹配到路径 build.ts 不应该能匹配到" name="Jest Config Builder 不指定 Project, Test Matcher 应该能正确匹配到路径 build.ts 不应该能匹配到" time="0.001">
+    </testcase>
+    <testcase classname="Jest Config Builder 不指定 Project, Test Matcher 应该能正确匹配到路径 其它配置文件不应该能匹配到" name="Jest Config Builder 不指定 Project, Test Matcher 应该能正确匹配到路径 其它配置文件不应该能匹配到" time="0">
+    </testcase>
+  </testsuite>
 </testsuites>

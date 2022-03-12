@@ -1,6 +1,6 @@
 import { Config } from '@jest/types';
 import { pathsToModuleNameMapper, RawCompilerOptions } from 'ts-jest';
-import tsconfig from './tsconfig.json';
+import tsconfig from '../tsconfig.json';
 
 // https://jestjs.io/docs/configuration
 
@@ -36,13 +36,13 @@ function coverageConfig(project?: string): Config.InitialOptions {
 
 // 初始化环境
 const globalSetupFiles = ['reflect-metadata'];
-const projectSetupFiles = ['<rootDir>/packages/app/testing/setup.js'];
+const projectSetupFiles = ['<rootDir>/packages/app/test/setup.js'];
 // 预加载扩展
 const globalSetupFilesAfterEnv = ['jest-enzyme'];
 const projectSetupFilesAfterEnv = [
-  '<rootDir>/testing/jest.setup.ts',
-  '<rootDir>/packages/demo/testing/setup-jest.ts',
-  '<rootDir>/packages/app/testing/setupAfterEnv.ts',
+  '<rootDir>/test/jest.setup.ts',
+  '<rootDir>/packages/demo/test/setup-jest.ts',
+  '<rootDir>/packages/app/test/setupAfterEnv.ts',
 ];
 function setupFiles(
   project?: string
@@ -71,15 +71,15 @@ function testTarget(
   return {
     testMatch: [
       '<rootDir>/src/**/__tests__/**/*.(spec|test).(ts|tsx)',
-      '<rootDir>/testing/**/*.(spec|test).(ts|tsx)',
+      '<rootDir>/test/**/*.(spec|test).(ts|tsx)',
       `<rootDir>/packages/${
         project ?? '*'
       }/src/**/__tests__/**/*.(spec|test).(ts|tsx)`,
-      `<rootDir>/packages/${project ?? '*'}/testing/**/*.(spec|test).(ts|tsx)`,
-      '<rootDir>/jest.config.build.spec.ts',
+      `<rootDir>/packages/${project ?? '*'}/test/**/*.(spec|test).(ts|tsx)`,
+      '<rootDir>/test/helpers/**/*.(spec|test).(ts|tsx)',
     ],
     // 忽略的测试示例文件
-    testPathIgnorePatterns: ['<rootDir>/testing/demo'],
+    testPathIgnorePatterns: ['<rootDir>/packages/app/test/demo'],
     // 忽略的模块，不参与编译
     modulePathIgnorePatterns: ['<rootDir>/packages/doc'],
   };

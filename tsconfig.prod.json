@@ -3,7 +3,7 @@
   "compilerOptions": {
     "types": ["node"]
   },
-  "include": ["**/src", "**/typing"],
+  "include": ["**/src", "**/typed"],
   "exclude": [
     "node_modules",
     "dist",
