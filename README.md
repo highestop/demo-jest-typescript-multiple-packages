@@ -5,6 +5,6 @@ yarn
 yarn test
 yarn test:dev
 
-# secure jest config
+# build jest config
 yarn test:builder
 ```
