@@ -2,6 +2,7 @@
 
 # compiled output
 dist
+out
 
 # dependencies
 node_modules
@@ -11,8 +12,8 @@ node_modules
 .yarnrc
 
 # locks
-package-lock.json
-yarn.lock
+# package-lock.json
+# yarn.lock
 
 # logs
 npm-debug.log
