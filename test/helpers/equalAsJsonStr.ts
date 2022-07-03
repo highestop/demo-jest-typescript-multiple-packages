@@ -1,8 +1,4 @@
-expect.extend({
-  toEqualAsJsonStr,
-});
-
-export function toEqualAsJsonStr(received: any, expected: string) {
+export default function toEqualAsJsonStr(received: any, expected: string) {
   if (JSON.stringify(received) === expected) {
     return {
       message: () =>

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Button: React.FC = (props: React.PropsWithChildren<any>) => (
+const Button = (props: React.PropsWithChildren<any>) => (
   <button>{props.children}</button>
 );
 

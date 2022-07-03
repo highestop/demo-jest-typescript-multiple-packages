@@ -3,7 +3,9 @@ describe('[index]', () => {
     describe('when/act', () => {
       beforeEach(() => {});
       afterEach(() => {});
-      test('then/assert', () => {});
+      test('then/assert', () => {
+        expect(true).toBeTruthy();
+      });
     });
   });
 });

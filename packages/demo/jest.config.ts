@@ -1,8 +1,7 @@
 import { Config } from '@jest/types';
-import { createJestConfig } from '../../test/create-jest-config';
+import { createPackageJestConfig } from '../../test/createJestConfig';
 import packageJson from './package.json';
 
-export default {
-  ...createJestConfig(packageJson.name),
-  displayName: packageJson.name,
-} as Config.InitialOptions;
+export default createPackageJestConfig(
+  packageJson.name
+) as Config.InitialOptions;
