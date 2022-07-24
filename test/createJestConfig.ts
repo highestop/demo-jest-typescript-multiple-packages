@@ -52,7 +52,7 @@ function createJestConfig(project?: string): InitialOptionsTsJest {
       // lodash-es 是 esmodule 要特殊处理
       '^lodash-es$': 'lodash',
       // 如果项目中用了 svgr 将 svg 引入为 ReactComponent，这里统一将其 mock 为 div
-      '\\.svg$': '<rootDir>/test/helpers/mock-svgr-component.ts',
+      '\\.svg$': '<rootDir>/test/helpers/mockSvgrComponent.ts',
       // 因为用 tsconfig.paths 做了 alias，所以解析时要转换一下
       ...pathsToModuleNameMapper(tsconfig.compilerOptions.paths, {
         prefix: '<rootDir>/packages/',
