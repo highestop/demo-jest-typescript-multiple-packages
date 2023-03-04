@@ -1,10 +1,6 @@
 {
   "name": "demo-jest-typescript",
-  "version": "0.0.0",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/highestop/demo-jest.git"
-  },
+  "version": "1.0.0",
   "scripts": {
     "test": "jest --silent",
     "test:dev": "jest --watchAll --verbose=false",
