@@ -1,4 +1,4 @@
-# demo-jest-typescript
+# demo-jest-typescript-multiple-packages
 
 ```
 yarn
